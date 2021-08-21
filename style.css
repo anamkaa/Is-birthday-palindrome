@@ -24,6 +24,8 @@ input{
     margin: 2rem;
     padding: 0.5rem;
     border: none;
+    font-size: large;
+    font-weight: bolder;
 }
 
 button{
