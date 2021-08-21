@@ -1,21 +1,12 @@
-const dateInput = document.querySelector("#date-input");
-const checkBtn = document.querySelector("#check-btn");
-const outputBox = document.querySelector("#output-box");
-
-
 
 
 //function to reverse a string
-function reverseTheString(string){
-    var charString = string.split('');
-    var reverseCharString = charString.reverse();
+function reverseTheString(string){ 
+    var charString = string.split(''); 
+    var reverseCharString = charString.reverse(); 
     var reversedString = reverseCharString.join('');
     return reversedString;
 }
-
-// var string = 'hello';
-// var testFunction = reverseTheString(string);
-// console.log(testFunction);
 
 //function to check for palindrome
 function checkForPalindrome(string){
@@ -156,23 +147,16 @@ function getNextPalindromeDate(date){
         if(isPalindrome){
             break;
         }
-        nextdate = getNextDate(nextDate);
+        nextDate = getNextDate(nextDate);
     }
 
-    return [ctr,nextDate]
+    return [ctr,nextDate];
 }
 
 
-
-var date = {
-    day:1,
-    month:3,
-    year:2020
-}
-
-var testFunction = getNextPalindromeDate(date);
-console.log(testFunction);
-
+const dateInput = document.querySelector("#date-input");
+const checkBtn = document.querySelector("#check-btn");
+const outputBox = document.querySelector("#output-box");
 
 
 function clickHandler(e){
@@ -181,8 +165,8 @@ function clickHandler(e){
 
     if(bdayStr !== '')
     {
-        dateStr = bdayStr.split('-');
-        date = {
+         var dateStr = bdayStr.split('-');
+         var date = {
           day: Number(dateStr[2]),
           month: Number(dateStr[1]),
           year: Number(dateStr[0])
@@ -191,16 +175,24 @@ function clickHandler(e){
         var isPalindrome = checkPalindromeForAllDateFormats(date);
 
         if(isPalindrome){
-            outputBox.innerHTML("Your Birthday is a Palindrome");
+            outputBox.style.color = "green";
+            outputBox.innerText = "Your Birthday is a Palindrome";
         }
 
         else{
             var [ctr,nextDate] = getNextPalindromeDate(date);
-
-            outputBox.innerHTML = (`Your birthday is not Palindrome. The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}. You missed it by ${ctr} days`);
+            
+            outputBox.style.color = "blue";
+            outputBox.innerText = (`Your birthday is not palindrome. Next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, You missed by ${ctr} days.`);
+            
         }
     }
 
+    else{
+        outputBox.style.color = "red";
+        outputBox.innerText = ("Please give an input.");
+    }
+ 
     
 }
 
