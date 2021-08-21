@@ -175,21 +175,18 @@ function clickHandler(e){
         var isPalindrome = checkPalindromeForAllDateFormats(date);
 
         if(isPalindrome){
-            outputBox.style.color = "green";
             outputBox.innerText = "Your Birthday is a Palindrome";
         }
 
         else{
             var [ctr,nextDate] = getNextPalindromeDate(date);
             
-            outputBox.style.color = "blue";
             outputBox.innerText = (`Your birthday is not palindrome. Next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, You missed by ${ctr} days.`);
             
         }
     }
 
     else{
-        outputBox.style.color = "red";
         outputBox.innerText = ("Please give an input.");
     }
  
