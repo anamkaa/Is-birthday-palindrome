@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 *{
-
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #C026D3;
+    background-color: #FBCFE8;
     font-family: 'Comfortaa', cursive;
-    color: white;
+    color: #F472B6;
+}
+
+h1{
+    color: #F472B6;
 }
 
 .container{
@@ -18,6 +23,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 50vw;
+    padding: 2rem;
 }
 
 input{
@@ -26,6 +32,7 @@ input{
     border: none;
     font-size: large;
     font-weight: bolder;
+    color: #F472B6;
 }
 
 button{
@@ -39,7 +46,7 @@ button{
     border-radius: 0.2rem;
     transition: 0.5s;
     background-color: 
-    #86198F
+    #F472B6
     ;
     border: none;
     color: white;
@@ -49,6 +56,10 @@ button{
 
 button:hover{
     font-size: larger;
+    border: solid;
+    border-color:#F472B6 ;
+    color: #F472B6;
+    background-color: white;
 }
 
 #output-box{
@@ -57,3 +68,49 @@ button:hover{
     font-size: larger;
     font-weight: bolder;
 }
+
+.link 
+{
+    text-decoration: none;
+    padding: 0.4rem 0.4rem;
+    transition: 0.5s;
+}
+
+.list-non-bullet
+{
+    list-style: none;
+}
+
+.list-item-inline
+{
+    display: inline;
+    padding: 0.5rem, 1rem;
+}
+
+.footer
+{
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    background-color:
+    #F472B6 ;
+    /* color: ; */
+    border-bottom-right-radius: 1rem;
+    position: fixed;
+    bottom:0 ;
+    padding: 2rem;
+
+}
+
+.footer .link
+{
+ color:white;
+ font-weight: bold;
+}
+
+.footer .ul 
+{
+    padding-inline-start: 0;
+}
+
